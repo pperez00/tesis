@@ -1,0 +1,29 @@
+html, body{
+    height:100%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+  }
+
+.bg1{
+    background-color: aqua;    
+}
+
+.bg2{
+    background-color: blue;
+    
+}
+
+.grupos{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta-grupo{
+    
+}
+
+footer{
+    background-color: grey;
+}
