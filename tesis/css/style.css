@@ -14,14 +14,26 @@ html, body{
     
 }
 
+main{
+    height: 100%;
+    padding: 20px;
+    background-color: palegreen;
+}
+
 .grupos{
-    height: 100vh;
+    background-color: rgb(233, 27, 27);
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .tarjeta-grupo{
-    
+   background-color:black; 
+}
+
+.tarjeta{
+    justify-content: center;
+    align-items: center;
 }
 
 footer{

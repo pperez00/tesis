@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Grupy</title>
 
     <?php $seccion = isset($_GET["seccion"]) ? $_GET["seccion"] : 'grupos'; ?>
@@ -13,32 +13,34 @@
 </head>
 <body>
     <?php require('navbar.php'); ?>
+    <main class="container-fluid">
     
     <?php
        switch($seccion){
                
             case "login":
-               include "login.php";
+               include "login/login.php";
                break;               
             case "archivos":
-               include "archivos.php";
+               include "archivos/archivos.php";
                break;           
             case "chat":
-               include "chat.php";
+               include "chat/chat.php";
                break;
             case "tareas":
-               include "tareas.php";
+               include "tareas/tareas.php";
                break;
             case "juego":
-               include "juego.php";
+               include "juego/juego.php";
                break;
             case "grupos":
                default:
-               include "grupos.php";
+               include "grupos/grupos.php";
                
        }       
        
        ?>
+       </main>
 
 <footer>
    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At totam hic porro doloribus perferendis
