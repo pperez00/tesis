@@ -32,10 +32,16 @@ main{
 }
 
 .tarjeta{
+    position: relative;
     justify-content: center;
     align-items: center;
 }
 
 footer{
     background-color: grey;
+}
+.img-grupo{
+    height: 100px;
+    width: 100px;
+    margin: auto;
 }
