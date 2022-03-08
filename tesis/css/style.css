@@ -16,26 +16,29 @@ html, body{
 
 main{
     flex: 1;
+    padding: 10px;
 }
 
 .grupos{
     background-color: rgb(233, 27, 27);
+    height: 100%;
 }
 
 .tarjeta-grupo{
    background-color:black; 
 }
 
-.tarjeta{
-    justify-content: center;
-    align-items: center;
-}
 
-footer{
-    background-color: grey;
-}
+
+
 .img-grupo{
     height: 100px;
     width: 100px;
     margin: auto;
+}
+
+
+footer{
+    height: 60px;
+    background-color: grey;
 }

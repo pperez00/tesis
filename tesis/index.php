@@ -16,8 +16,8 @@
     <main class="container-fluid">
     
     <?php
-       switch($seccion){
-               
+       switch($seccion)
+       {               
             case "login":
                include "login/login.php";
                break;               
@@ -35,14 +35,13 @@
                break;
             case "grupos":
                default:
-               include "grupos/grupos.php";
-               
+               include "grupos/grupos.php";               
        }       
        
        ?>
        </main>
 
-<footer>
+<footer class="container-fluid">
    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At totam hic porro doloribus perferendis
        atque ab praesentium nemo, architecto eius recusandae reprehenderit cupiditate. Adipisci debitis sit 
        velit dolor enim itaque?

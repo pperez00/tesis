@@ -1,4 +1,12 @@
-<div class="container grupos">
+<div class="container-fluid d-flex justify-content-end">
+    <div class="row">
+        <div class="col">
+            <a class="btn btn-primary" href="#" role="button">Nuevo grupo</a>
+        </div>
+
+    </div>
+</div>
+<div class="container grupos d-flex justify-content-center align-items-center">    
     <div class="row tarjeta-grupo">
         <div class="col tarjeta">
             <div class="card" style="width: 18rem;">

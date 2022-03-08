@@ -6,7 +6,8 @@ class Grupo
     private $nombre_grupo = '';
 
     // Declaración de un método
-    public function getNombre() {
+    public function getNombre() 
+    {
         echo $this->nombre_grupo;
     }
 }
