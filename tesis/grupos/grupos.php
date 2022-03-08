@@ -1,7 +1,7 @@
 <div class="container-fluid d-flex justify-content-end">
     <div class="row">
         <div class="col">
-            <a class="btn btn-primary" href="#" role="button">Nuevo grupo</a>
+            <a class="btn btn-primary" href="index.php?seccion=nuevo" role="button">Nuevo grupo</a>
         </div>
 
     </div>
@@ -43,6 +43,8 @@
                 </div>
             </div>
         </div>
+
+        
 
         
 

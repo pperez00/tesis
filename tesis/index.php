@@ -12,7 +12,10 @@
 
 </head>
 <body>
-    <?php require('navbar.php'); ?>
+    <?php 
+    require('navbar.php');
+    require_once('./pdoconnect.php');
+    ?>
     <main class="container-fluid">
     
     <?php
@@ -32,6 +35,9 @@
                break;
             case "juego":
                include "juego/juego.php";
+               break;
+            case "nuevo":
+               include "grupos/nuevo_grupo.php";
                break;
             case "grupos":
                default:
