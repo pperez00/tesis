@@ -22,7 +22,7 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php?seccion=juego">Juego</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item ">
           <a class="nav-link" href="index.php?seccion=login">Iniciar Sesion</a>
         </li>
       </ul>

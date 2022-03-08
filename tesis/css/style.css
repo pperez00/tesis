@@ -15,16 +15,11 @@ html, body{
 }
 
 main{
-    height: 100%;
-    padding: 20px;
-    background-color: palegreen;
+    flex: 1;
 }
 
 .grupos{
     background-color: rgb(233, 27, 27);
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
 }
 
 .tarjeta-grupo{
@@ -32,7 +27,6 @@ main{
 }
 
 .tarjeta{
-    position: relative;
     justify-content: center;
     align-items: center;
 }
