@@ -24,7 +24,7 @@ if (strlen($id_chat_grupo) == 0) {
     if ($grupos != null) {
         $_SESSION['id_chat_grupo'] = $id_chat_grupo;
 ?>
-        <h1>Agregar miembro</h1>
+        <h1 class="title">Agregar miembro</h1>
         <form class="agregar_miembro_form pb-3 gral-form" id="agregar_miembro_form" action="grupos/agregar_miembro_grupo.php">
             <label id="nuevo_grupo" class="text-dark" for="chk" aria-hidden="true">Invitar</label>
             <?php require_once 'grupos/lista_personas.php'; ?>

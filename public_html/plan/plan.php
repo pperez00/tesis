@@ -1,4 +1,3 @@
-<h1>Plan</h1>
 <?php
 require_once('libs/pdoconnect.php');
 require_once 'mercadopago_vendor/autoload.php';
@@ -33,7 +32,9 @@ if ($permiso > 0) {
 
 ?>
 
-<div class="row h-100 justify-content-center align-items-center mb-5">
+<h1 class="title">Plan</h1>
+
+<div class="row justify-content-center align-items-center mb-5">
 
     <div class="inicio">
         <div class="card-body">
@@ -41,32 +42,32 @@ if ($permiso > 0) {
             <div class="icon">
                 <ion-icon name="globe-outline"></ion-icon>
             </div>
-            <h2 class="card-title text-center">Gratis</h2>
-            <div class="plan">
-                <ul class="list-group w-100">
-                    <li class="list-group-item">Podes crear hasta tres grupos</li>
-                    <li class="list-group-item">Podes invitar hasta tres usuarios</li>
-                </ul>
+            <h2 class="plan-texto text-center  mt-3">Gratis</h2>
+            <div class="plan grupos">
+                <p class="plan-texto">Podes crear hasta tres grupos</p>
+                <p class="plan-texto">Podes invitar hasta tres usuarios</p>
+
             </div>
 
         </div>
     </div>
 
-    <div class="inicio mb-5">
+    <div class="inicio grupos">
 
         <div class="card-body">
             <div class="icon">
                 <ion-icon name="diamond-outline"></ion-icon>
             </div>
-            <h2 class="card-title text-center mt-3">Premium $ 850</h2>
-            <div class="plan">
-                <ul class="list-group w-auto">
-                    <li class="list-group-item">Sin limite para crear grupos</li>
-                    <li class="list-group-item">Podes invitar todos los usuarios que quieras</li>
-                </ul>
-                <?php if ($permiso > 0) : ?>
-                    <a href="<?php echo $preferencias->init_point; ?>" id="pago" class="w-100 g-2 btn btn-primary mt-3"> <i class="far fa-credit-card"></i> Comprar</a>
-                <?php endif; ?>
+            <h2 class="plan-texto text-center mt-3">Premium $ 850</h2>
+            <div class="plan grupos">
+                <p class="plan-texto">Sin limite para crear grupos</p>
+                <p class="plan-texto">Podes invitar todos los usuarios que quieras</p>
+
+                <div class="d-flex justify-content-center">
+                    <?php if ($permiso > 0) : ?>
+                        <a href="<?php echo $preferencias->init_point; ?>" id="pago" class="btn boton"> <i class="far fa-credit-card"></i> Comprar</a>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>

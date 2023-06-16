@@ -141,7 +141,6 @@ class Usuario
             $foto_sql = $this->pdoconnect->buscar_datos($parametros)[0]['foto'];
             if ($foto_sql != null) {
                 $foto_ruta = 'usuarios/' . $usuario . '/' . $this->get_carpetas()[0] . '/' . $foto_sql;
-                echo $foto_ruta;
                 if (is_file($foto_ruta)) {
                     $foto = $foto_ruta;
                 }

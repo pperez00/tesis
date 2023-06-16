@@ -4,7 +4,7 @@ require_once('libs/pdoconnect.php');
 require_once('libs/admin.php');
 require_once('libs/Limpiar_data.php');
 ?>
-<form class="signup pb-5" id="signup">
+<form class="signup p-3" id="signup">
     <label id="titulo_formulario" class="text-dark" for="chk" aria-hidden="true">Registrarse</label>
     <div class="input-group mt-2">
         <span class="input-group-text">Usuario</span>

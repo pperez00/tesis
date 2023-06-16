@@ -154,7 +154,7 @@
             unset($_SESSION['id']);
             break;
          case 'nuevo':
-            include_once "grupos/nuevo_Grupo.php";
+            include_once "grupos/nuevo_grupo.php";
             unset($_SESSION['id']);
             break;
          case 'agregar_miembro':

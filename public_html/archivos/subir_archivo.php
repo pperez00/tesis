@@ -20,9 +20,9 @@ $tarea->set_id_usuario($id_usuario);
 $grupos = $grupo->get_grupo();
 
 ?>
-<h1>Archivos</h1>
+<h1 class="title">Archivos</h1>
 <?php if (count($grupos) > 0) { ?>
-    <form class="subir mb-5 pb-1" id="subir">
+    <form class="subir gral-form mb-5 pb-1" id="subir">
         <label id="titulo_formulario" class="text-dark" for="chk" aria-hidden="true">Subir archivo</label>
         <div class="input-group mt-2 w-auto mb-3 ml-5">
             <span class="input-group-text">Grupo</span>

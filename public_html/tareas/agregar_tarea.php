@@ -21,8 +21,8 @@ if ($limpiar_data->validar_data($datos, -1)) {
             $_SESSION['datos_validar'] = $dato_validar;
 ?>
 
-            <form class="nueva_tarea_form pb-3" id="nueva_tarea_form" action="tareas/dar_tarea.php">
-                <h1 id="nuevo_grupo" class="text-dark title" for="chk" aria-hidden="true">Asignar tarea</h1>
+        <h1 id="nuevo_grupo" class="title" for="chk" aria-hidden="true">Asignar tarea</h1>
+            <form class="nueva_tarea_form gral-form pb-3" id="nueva_tarea_form" action="tareas/dar_tarea.php">
 
                 <div class="input-group mt-2">
                     <span class="input-group-text">Descripción</span>
@@ -64,7 +64,7 @@ if ($limpiar_data->validar_data($datos, -1)) {
 <?php
         } else {
             ob_start();
-         header('Location: index.php');
+            header('Location: index.php');
         }
     } else {
         ob_start();
