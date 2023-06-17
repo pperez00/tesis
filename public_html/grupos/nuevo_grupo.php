@@ -19,7 +19,7 @@ if ($permiso != 1) {
   }
 }
 ?>
-<h1>Nuevo grupo</h1>
+<h1 class="title">Nuevo grupo</h1>
 <form class="nuevo_grupo_form gral-form pb-3" id="nuevo_grupo_form" action="grupos/crear_grupo.php">
   <label id="nuevo_grupo" class="text-dark" for="chk" aria-hidden="true">Crear grupo</label>
 

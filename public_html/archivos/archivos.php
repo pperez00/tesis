@@ -24,7 +24,7 @@ $grupos = $grupo->get_grupo();
 <h1 class="title">Archivos</h1>
 
 <?php if (count($grupos) > 0) { ?>
-    <div class="container-fluid d-flex justify-content-end boton-flotante">
+    <div class="boton-flotante">
         <div class="row">
             <div class="col btn-mas">
                 <a class="btn boton-mas" href="index.php?seccion=subir_archivo" role="button"> <i class="fa-solid fa-plus"></i></a>

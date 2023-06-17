@@ -324,7 +324,7 @@ select {
 
 
 .title {
-  margin: 1em;
+  margin: 0.5em;
   color: white;
 }
 
@@ -631,15 +631,16 @@ select {
 
 .boton-flotante{
   position: fixed;
-  bottom: 4rem;
-  right: 1rem;
-  z-index: 2;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 4;  
 }
 
 .btn-mas a{
   background-color: white;
   color: var(--color-secundario);
   border-radius: 50%;
+  border: 0.5px solid var(--color-secundario);
   height: 55px;
   width: 55px;
   text-align: center;
@@ -656,12 +657,12 @@ select {
   color: white;  
 }
 
-@media (max-width: 1400px) {
+@media (min-width: 500px) {
   .boton-flotante {
       position: fixed;
-      bottom: 0.5rem;
-      right: 0.5rem;
-      z-index: 2;  
+      bottom: 3.5rem;
+      right: 1rem;
+      z-index: 4;  
     }
 }
 

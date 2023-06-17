@@ -16,7 +16,7 @@ $grupos = $grupo->get_grupo();
 ?>
 <h1 class="title">Grupos</h1>
 
-<div class="container-fluid d-flex justify-content-end boton-flotante">
+<div class="boton-flotante">
     <div class="row">
         <div class="col btn-mas">
             <a class="btn" href="index.php?seccion=nuevo" role="button"> <i class="fa-solid fa-plus icono"></i></a>
