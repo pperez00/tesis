@@ -9,8 +9,8 @@ class Pdoconnect
     function __construct(Limpiar_data $limpiar_data)
     {
         $servername = "localhost";
-        $username = "id20780492_admin";
-        $password = "Grupytest123!";
+        $username = "id20780492_grupy";
+        $password = "Grupy_2023";
         $dbname = "id20780492_grupy";
         $this->limpiar_data = $limpiar_data;
         try {
@@ -57,13 +57,14 @@ class Pdoconnect
         $datos = array();
         try {
             if (isset($parametros['campos']) == true && $this->contiene_parametros($parametros) == true) {
-                $sql = "select " . $parametros['campos'] . " from " . $parametros['tabla'] . " where " . $this->limpiar_data->limpiar($parametros['where']);
+                $sql = "select " . $parametros['campos'] . " from " . $parametros['tabla'] . " where " . $parametros['where'];
                 $coneccion = $this->conn->prepare($sql);
                 $coneccion->execute();
-              //  echo $sql;
+           // echo $sql .'<hr>';
                 $datos = $coneccion->fetchAll(\PDO::FETCH_ASSOC);
             }
         } catch (\Throwable $th) {
+            echo $th;
             die();
         }
         return $datos;
@@ -74,12 +75,13 @@ class Pdoconnect
         $datos = false;
         try {
             if ($this->contiene_parametros($parametros) == true) {
-                $sql = 'delete from ' . $parametros['tabla'] . ' where ' . $this->limpiar_data->limpiar($parametros['where']);
-                $coneccion = $this->conn->prepare($sql);
-                $datos = $coneccion->execute();
+             
+                $sql = 'delete from ' . $parametros['tabla'] . ' where ' . $parametros['where'];
+                $datos = $this->conn->prepare($sql)->execute();
             }
         } catch (\Throwable $th) {
             die();
+            $datos = false;
         }
         return $datos;
     }
@@ -99,8 +101,7 @@ class Pdoconnect
                 $values = $this->cerrar_insertar($values);
                 $sql = "INSERT INTO " . $parametros['tabla'] . ' ' . $campos . ' VALUES ' . $values;
                 $coneccion = $this->conn->prepare($sql);
-                echo $sql;
-//echo $sql;           
+                //echo $sql;           
                 $estado = $coneccion->execute();
             } 
         } catch (\Throwable $th) {
@@ -121,7 +122,7 @@ class Pdoconnect
                 $campos = substr($campos, 0, -1);
                 $sql = "UPDATE " . $parametros['tabla'] . " SET " . $campos . " WHERE " . $parametros['where'];
                 $coneccion = $this->conn->prepare($sql);
-                echo $sql;   
+               // echo $sql;   
                 $estado = $coneccion->execute();
             }
         } catch (\Throwable $th) {
