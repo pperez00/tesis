@@ -66,9 +66,12 @@ $grupos = $grupo->get_grupo();
                                                     if ($value3['usuario'] == $miembro[0]['id']) {
                                                         if ($value3['usuario'] == $id_usuario) {
                                                 ?>
-                                                            <a onclick="borrar('<?php echo $value['id_chat_grupo'] . '_' . $value3['id']; ?>')" class="btn-block mb-3 btn w-100 boton-borrar"> Borrar</a>
+                                                    <p>
+                                                        <?php echo $value3['archivo']; ?>
+                                                    </p>
+                                                            <a onclick="borrar('<?php echo $value['id_chat_grupo'] . '_' . $value3['id']; ?>')" class="btn-block mb-3 btn boton-borrar"> Borrar</a>
                                                     <?php  } ?>
-                                                        <a onclick="descargar('<?php echo $value['id_chat_grupo'] . '_' . $value3['id']; ?>')" class="btn-block btn w-100 boton-descargar mb-3"> <i class="fa-solid fa-download mr-3"></i> Descargar</a>
+                                                        <a onclick="descargar('<?php echo $value['id_chat_grupo'] . '_' . $value3['id']; ?>')" class="btn-block btn boton-descargar mb-3"> <i class="fa-solid fa-download mr-3"></i> Descargar</a>
                                                 <?php
                                                     }
                                                 }

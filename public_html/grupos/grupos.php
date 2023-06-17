@@ -45,10 +45,16 @@ $grupos = $grupo->get_grupo();
                                     $miembro = $grupo->get_dato_grupo($value2['miembro'])
                                 ?>
                                     <li id="<?php echo $value['id_chat_grupo'] . '_' . $miembro[0]['id']; ?>" class="list-group-item">
-                                        <?php echo '<p> Usuario: ' . ucfirst($miembro[0]['nombre']) . '</p>'; ?>
-                                        <?php if ($value2['miembro'] == $id_usuario  or $value2['usuario'] == $id_usuario or $permiso == 1) { ?>
-                                            <a onclick="borrar('<?php echo $value['id_chat_grupo'] . '_' . $miembro[0]['id']; ?>')" class="btn-block btn w-100 boton-borrar">Borrar</a>
-                                        <?php  } ?>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <p class="m-0">
+                                                <?php echo ucfirst($miembro[0]['nombre']); ?>
+                                            </p>
+                                            <?php if ($value2['miembro'] == $id_usuario  or $value2['usuario'] == $id_usuario or $permiso == 1) { ?>
+                                                <a onclick="borrar('<?php echo $value['id_chat_grupo'] . '_' . $miembro[0]['id']; ?>')" class="btn-block btn boton-borrar">Borrar</a>
+                                            <?php  } ?>
+
+                                        </div>
                                     </li>
                                 <?php
                                 }
