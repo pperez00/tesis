@@ -39,7 +39,7 @@ if (count($grupos) > 0) {
               foreach ($grupo->get_miembros_grupo($value['id_chat_grupo']) as $key2 => $value2) {
                 $miembro = $grupo->get_dato_grupo($value2['miembro'])
               ?>
-                
+
                 <div id="<?php echo $value['id_chat_grupo'] . '_' . $miembro[0]['id']; ?>" class="card m-3">
 
                   <div class="usuario-card card-header">
@@ -75,35 +75,21 @@ if (count($grupos) > 0) {
                             </div>
                             <div class="botones-tarea card-footer">
                               <a onclick="borrar_tarea('<?php echo $value['id_chat_grupo'] . '_' . $miembro[0]['id'] . '_' . $tarea_array[$key_tarea]['id']; ?>')" class="btn boton-borrar col-auto m-2"><i class="fa-solid fa-trash-can"></i></a>
-                              <?php
-                              if (intval($tarea_array[$key_tarea]['id_estado']) != 3) :
-                              ?>
-                                <a onclick="cambiar_estado('<?php echo $value['id_chat_grupo'] . '_' . $miembro[0]['id'] . '_' . $tarea_array[$key_tarea]['id']; ?>')" class="btn boton-editar col-auto m-2"><i class="fa-solid fa-pen-to-square"></i></a>
-                              <?php
-                              endif;
-                              ?>
+                              <a onclick="cambiar_estado('<?php echo $value['id_chat_grupo'] . '_' . $miembro[0]['id'] . '_' . $tarea_array[$key_tarea]['id']; ?>')" class="btn boton-editar col-auto m-2"><i class="fa-solid fa-pen-to-square"></i></a>
                             </div>
-
                       </li>
-
-
                   <?php
                           endif;
                         }
                   ?>
                     </ul>
-
-
                   <?php
                   endif;
                   ?>
-
                 </div>
               <?php } ?>
             </ul>
-
           </div>
-
         </div>
       </div>
     <?php } ?>
