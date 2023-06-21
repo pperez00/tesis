@@ -93,7 +93,7 @@ class Tarea extends Conector implements get_nombre_interfaz
     public function get_tareas_id_usuario_grupo($id_usuario, $id_grupo)
     {
         $parametros = $this->get_parametros();
-        $parametros['where'] = "usuario='" . intval($id_usuario) . "' and id_grupo='" . $id_grupo . "' and estado !=3";
+        $parametros['where'] = "usuario='" . intval($id_usuario) . "' and id_grupo='" . $id_grupo . "' and estado !=-1";
         $buscar = $this->get_pdoconnect()->buscar_datos($parametros);
         return $buscar;
     }

@@ -4,7 +4,7 @@ class Pdoconnect
 {
     private $conn;
     private $limpiar_data;
-    private $ruta_servidor = 'http://localhost/public_html/';
+    private $ruta_servidor = 'http://localhost/tesis/public_html/';
 
     function __construct(Limpiar_data $limpiar_data)
     {

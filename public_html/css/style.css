@@ -678,4 +678,8 @@ select {
   color: white;
 }
 
+.sticky-top{
+  z-index: 2;
+}
+
 
