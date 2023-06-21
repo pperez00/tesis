@@ -64,13 +64,16 @@ $grupos = $grupo->get_grupo();
                                                 <?php
                                                 foreach ($archivos as $key3 => $value3) {
                                                     if ($value3['usuario'] == $miembro[0]['id']) {
-                                                        if ($value3['usuario'] == $id_usuario) {
                                                 ?>
-                                                    <p>
-                                                        <?php echo $value3['archivo']; ?>
-                                                    </p>
+                                                        <p>
+                                                            <?php echo $value3['archivo']; ?>
+                                                        </p>
+                                                        <?php
+                                                        if ($value3['usuario'] == $id_usuario) {
+                                                        ?>
+
                                                             <a onclick="borrar('<?php echo $value['id_chat_grupo'] . '_' . $value3['id']; ?>')" class="btn-block mb-3 btn boton-borrar"> Borrar</a>
-                                                    <?php  } ?>
+                                                        <?php  } ?>
                                                         <a onclick="descargar('<?php echo $value['id_chat_grupo'] . '_' . $value3['id']; ?>')" class="btn-block btn boton-descargar mb-3"> <i class="fa-solid fa-download mr-3"></i> Descargar</a>
                                                 <?php
                                                     }
