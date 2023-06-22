@@ -72,7 +72,7 @@ if ($permiso == 1 && $estado == true) {
                      form_jq.trigger('reset');
                      setTimeout(() => {
                         window.location = 'index.php?seccion=admin&id=6';
-                     }, 3000);
+                     }, 1000);
                   }
                }
             });

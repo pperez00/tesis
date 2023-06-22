@@ -23,14 +23,8 @@ $grupos = $grupo->get_grupo();
 ?>
 <h1 class="title">Archivos</h1>
 
+
 <?php if (count($grupos) > 0) { ?>
-    <div class="boton-flotante">
-        <div class="row">
-            <div class="col btn-mas">
-                <a class="btn boton-mas" href="index.php?seccion=subir_archivo" role="button"> <i class="fa-solid fa-plus"></i></a>
-            </div>
-        </div>
-    </div>
     <div class="container d-flex justify-content-center align-items-center">
         <div class="row tarjeta-grupo">
             <?php foreach ($grupos as $key => $value) { ?>
@@ -87,7 +81,7 @@ $grupos = $grupo->get_grupo();
                                 <?php } ?>
                             </ul>
                         </div>
-
+                        <a href="index.php?seccion=subir_archivo&chat_grupo=<?php echo $value['id_chat_grupo']; ?>" class="btn boton m-4">Subir</a>
                     </div>
                 </div>
 
@@ -127,7 +121,7 @@ $grupos = $grupo->get_grupo();
                                     if (response.error == false) {
                                         setTimeout(() => {
                                             window.location = 'index.php?seccion=archivos';
-                                        }, 3000);
+                                        }, 1000);
                                     }
                                 }
                             });

@@ -27,7 +27,7 @@ try {
         $target_dir = $usuario_carpeta_principal . '/' . $carpetas[1]  . '/';
         $nombre = basename($_FILES["archivo"]["name"]);
         $extension_pdf = end((explode(".", $nombre)));
-        $nombre = str_replace('.' . $extension_pdf, '_' . $datos['grupo'], $nombre) . '.' . $extension_pdf;
+        // $nombre = str_replace('.' . $extension_pdf, '_' . $datos['grupo'], $nombre) . '.' . $extension_pdf;
         $target_file = $target_dir . $nombre;
         if (count($grupo->get_grupo(" and id_chat_grupo='" . $datos['grupo'] . "'")) == 0) {
             $error = true;

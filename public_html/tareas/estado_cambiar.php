@@ -49,7 +49,7 @@ if ($limpiar_data->validar_data($datos, -1)) {
                     if (data.error == false) {
                         setTimeout(() => {
                             window.location = 'index.php?seccion=tareas';
-                        }, 3000);
+                        }, 1000);
                     }
 
                 }

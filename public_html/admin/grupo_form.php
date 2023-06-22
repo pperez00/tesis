@@ -55,7 +55,7 @@ if ($permiso == 1 && $estado == true) {
                     if (data.error == false) {
                         setTimeout(() => {
                             window.location = 'index.php?seccion=admin&id=4';
-                        }, 3000);
+                        }, 1000);
                     }
 
                 }

@@ -118,7 +118,7 @@
          default:
          case "login":
             if ($id_usuario > 0) {
-               include_once "perfil/perfil.php";
+               include_once "grupos/grupos.php";
                unset($_SESSION['id']);
             } else {
                include_once "login/login.php";
@@ -195,7 +195,7 @@
             data.msj = '<?php echo $_SESSION['mensaje_comprado']; ?>';
             setTimeout(() => {
                enviar_toast(data);
-            }, 3500);
+            }, 1500);
          </script>
       <?php
       }

@@ -124,7 +124,7 @@ if ($permiso == 1 && $estado == true) {
                                 handler: function(event) {
                                     setTimeout(() => {
                                         $('#modal').show();
-                                    }, 1200);
+                                    }, 200);
                                 }
                             },
                             {

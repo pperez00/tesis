@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-06-2023 a las 22:29:59
+-- Tiempo de generación: 22-06-2023 a las 02:02:02
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -34,17 +34,6 @@ CREATE TABLE `archivos_grupo` (
   `usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `archivos_grupo`
---
-
-INSERT INTO `archivos_grupo` (`id`, `archivo`, `grupo`, `usuario`) VALUES
-(30, 'pablo perez.pdf', '646a7fdd2d77e', 18),
-(31, 'pablo perez_646a7fdd2d77e.pdf', '646a7fdd2d77e', 18),
-(32, 'pablo perez_646e79a5276ae.pdf', '646e79a5276ae', 18),
-(33, 'pablo perez_646bb99deabad.pdf', '646bb99deabad', 20),
-(34, 'pablo_perez_647667238cb39.pdf', '647667238cb39', 18);
-
 -- --------------------------------------------------------
 
 --
@@ -74,19 +63,17 @@ INSERT INTO `comprados` (`id`, `id_mercado`, `id_usuario`, `estado`) VALUES
 
 CREATE TABLE `estado_tareas` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL,
-  `todos` int(11) NOT NULL
+  `nombre` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `estado_tareas`
 --
 
-INSERT INTO `estado_tareas` (`id`, `nombre`, `todos`) VALUES
-(1, 'Incompleta', 0),
-(2, 'Comenzada', 1),
-(3, 'Terminada', 0),
-(4, 'No comenzada', 0);
+INSERT INTO `estado_tareas` (`id`, `nombre`) VALUES
+(2, 'Comenzada'),
+(3, 'Terminada'),
+(4, 'No comenzadas');
 
 -- --------------------------------------------------------
 
@@ -108,10 +95,14 @@ CREATE TABLE `grupos` (
 
 INSERT INTO `grupos` (`id`, `usuario`, `miembro`, `id_chat_grupo`, `nombre`) VALUES
 (38, 18, 20, '6476bdad61fac', 'Grupo 1'),
-(39, 18, 19, '6476bdc7a1a10', 'Grupo 2'),
 (41, 25, 19, '647e2e2cae3fe', 'grupo nuevo'),
 (44, 1, 25, '647e3014c9810', 'grupo admin'),
-(46, 1, 19, '647e303f952f6', 'grupo admin 2');
+(46, 1, 19, '647e303f952f6', 'grupo admin 2'),
+(51, 1, 22, '647fecf2094ef', 'fhdsgfhgfsgfsdh'),
+(55, 25, 18, '647e2e2cae3fe', 'grupo nuevo'),
+(57, 18, 20, '6476bdc7a1a10', 'Grupo 2'),
+(59, 18, 24, '6476bdc7a1a10', 'Grupo 2'),
+(62, 18, 26, '6476bdc7a1a10', 'Grupo 2');
 
 -- --------------------------------------------------------
 
@@ -151,19 +142,7 @@ CREATE TABLE `tareas` (
 --
 
 INSERT INTO `tareas` (`id`, `usuario`, `id_grupo`, `nombre`, `Estado`) VALUES
-(10000003, 19, '647667238cb39', 'tarea 2', 3),
-(10000004, 18, '647667238cb39', 'tarea 1', 1),
-(10000008, 19, '6476bdc7a1a10', 'otra tarea', 3),
-(10000013, 20, '6476bdad61fac', 'us1 tarea 1', 4),
-(10000014, 20, '6476bdad61fac', 'us 1 tarea 2', 4),
-(10000015, 18, '6476bdad61fac', 'pablo tarea 1', 4),
-(10000016, 18, '6476bdad61fac', 'pablo tarea 2', 4),
-(10000017, 19, '6476bdc7a1a10', 'gr2 prueba tarea 1', 4),
-(10000019, 25, '647e2e2cae3fe', 'tarea 2', 3),
-(10000020, 19, '647e2e2cae3fe', 'tarea 1', 4),
-(10000021, 25, '647e3014c9810', 'tarea 1', 4),
-(10000022, 25, '647e3014c9810', 'tarea 2', 4),
-(10000023, 19, '647e303f952f6', 'tarea 2', 3);
+(10000039, 1, '647e3014c9810', 'gbgfbh', 4);
 
 -- --------------------------------------------------------
 
@@ -191,10 +170,11 @@ INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `email`, `pass`, `permiso`, `
 (18, 'Pablo', 'pperez', 'fdsaf@dsa.com', '$2y$10$lOKtggH4PjV6MzGJBVuNhuZfUu8Cr22SLA2m6xmDfc54qpO2CA/hC', 2, '20211230_180035 (3).jpg', 1),
 (19, 'prueba', 'prueba', 'prueba@hotmail.com', '$2y$10$.HVuS2bIuuzgIUumCT3qvuI8.S5UKecP2dYqlNZf6KiaVWkXUH0VC', 2, '20211230_180040.jpg', 0),
 (20, 'usuario 1', 'usuario1', 'usuario1@hotmail.ccom', '$2y$10$jiloFjpBRbKFWqAXlMUwlOTc9DRYEU5Jk2PDi3bJS4od11FNh5nC2', 2, 'pablo.jpg', 0),
-(22, 'fgds', 'user3', 'gfds@ds.com', '$2y$10$Jwua5ApUoEwKqCYy9PwsZOzl4I3yEHkYR4SgXs5Yk3KO9YAREZemC', 2, '20211230_180042.jpg', 0),
+(22, 'cambiado', 'user3', 'gfds@ds.com', '$2y$10$3MpR2v1Z35oMYt9xAHKvzO3EntWdjJ.ayS7nzTFEQBS8Qd9uzeQsu', 2, 'hombre.png', 0),
 (23, 'us4', 'user4', 'jlhk@h.com', '$2y$10$MSPe9eHNIsjSmv4fE5GFouMJaEZJZRe54fp8UrYI2A/EGYNk6M8g2', 2, '20211117_0001.png', 0),
 (24, 'us5', 'user5', 'jlhk@hj.com', '$2y$10$iJLgufv5q/Z3kGzlwBURCOOfPfcjep0ZSOpnm/do3tCI83WbLegAO', 2, '20211117_0001.png', 0),
-(25, 'ultimo', 'ultimo', 'fasd@fads.com', '$2y$10$ptKUBRrzWgz8YoklMrXzj.xanD9h8Rj4Gr7RnbhE8gTulCJjmY2Kq', 2, 'WallpaperStudio10-179150-1920x1080.jpg', 0);
+(25, 'ultimo', 'ultimo', 'fasd@fads.com', '$2y$10$ptKUBRrzWgz8YoklMrXzj.xanD9h8Rj4Gr7RnbhE8gTulCJjmY2Kq', 2, 'WallpaperStudio10-179150-1920x1080.jpg', 0),
+(26, 'nuevo login', 'otrousuario', 'fads@fads.com', '$2y$10$PBjBBmjUBLfE8LtUlR4Ta.0Bg3lbkUT9YOg4ZQ8Fr/KxMRI39n5oa', 2, 'mujer.png', 0);
 
 --
 -- Índices para tablas volcadas
@@ -251,7 +231,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `archivos_grupo`
 --
 ALTER TABLE `archivos_grupo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT de la tabla `comprados`
@@ -263,13 +243,13 @@ ALTER TABLE `comprados`
 -- AUTO_INCREMENT de la tabla `estado_tareas`
 --
 ALTER TABLE `estado_tareas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `grupos`
 --
 ALTER TABLE `grupos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT de la tabla `permisos`
@@ -281,13 +261,13 @@ ALTER TABLE `permisos`
 -- AUTO_INCREMENT de la tabla `tareas`
 --
 ALTER TABLE `tareas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10000025;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10000047;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Restricciones para tablas volcadas

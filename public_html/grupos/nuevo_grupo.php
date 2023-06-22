@@ -57,7 +57,7 @@ if ($permiso != 1) {
         if (data.error == false) {
           setTimeout(() => {
             window.location = 'index.php?seccion=grupos';
-          }, 3000);
+          }, 1000);
         }
 
       }

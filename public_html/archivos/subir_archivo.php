@@ -15,7 +15,7 @@ $tarea = new Tarea($pdoconnect);
 $id_usuario = $usuario->get_id();
 $grupo = new Grupo($id_usuario, $pdoconnect);
 $grupo->set_group_by('group by id_chat_grupo');
-
+$selected = $_GET['chat_grupo'];
 $tarea->set_id_usuario($id_usuario);
 $grupos = $grupo->get_grupo();
 
@@ -30,7 +30,7 @@ $grupos = $grupo->get_grupo();
                 <?php
                 foreach ($grupos as $key => $value) {
                 ?>
-                    <option value="<?php echo $value['id_chat_grupo']; ?>"><?php echo ucfirst($value['nombre']); ?></option>
+                    <option value="<?php echo $value['id_chat_grupo']; ?>" <?php if($selected == $value['id_chat_grupo']){echo("selected");}?>><?php echo ucfirst($value['nombre']); ?></option>
                 <?php
                 }
                 ?>
@@ -67,7 +67,7 @@ $grupos = $grupo->get_grupo();
                             form_jq.trigger('reset');
                             setTimeout(() => {
                                 window.location = 'index.php?seccion=archivos';
-                            }, 3000);
+                            }, 1000);
                         }
                     }
                 });

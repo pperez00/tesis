@@ -45,7 +45,7 @@ unset($_SESSION['id']);
                 if (data.error == false) {
                     setTimeout(() => {
                         window.location = 'index.php';
-                    }, 3000);
+                    }, 1000);
                 }
 
             }

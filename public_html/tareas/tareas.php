@@ -48,7 +48,6 @@ if (count($grupos) > 0) {
                       <a onclick="dar_tarea('<?php echo $value['id_chat_grupo'] . '_' . $miembro[0]['id']; ?>')" class="btn boton mx-auto"><i class="fa-solid fa-plus"></i>
                         Nueva Tarea
                       </a>
-
                     </div>
                   </div>
                   <?php
@@ -106,7 +105,7 @@ if (count($grupos) > 0) {
       id_tarea = id;
       setTimeout(() => {
         $('#modal').show();
-      }, 1200);
+      }, 200);
     }
 
     function borrar_tarea_final() {

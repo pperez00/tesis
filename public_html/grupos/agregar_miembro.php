@@ -53,7 +53,7 @@ if (strlen($id_chat_grupo) == 0) {
                             if (data.error == false) {
                                 setTimeout(() => {
                                     window.location = 'index.php?seccion=grupos';
-                                }, 3000);
+                                }, 1000);
                             }
 
                         }
