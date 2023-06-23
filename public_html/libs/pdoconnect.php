@@ -60,7 +60,6 @@ class Pdoconnect
                 $sql = "select " . $parametros['campos'] . " from " . $parametros['tabla'] . " where " . $parametros['where'];
                 $coneccion = $this->conn->prepare($sql);
                 $coneccion->execute();
-           // echo $sql .'<hr>';
                 $datos = $coneccion->fetchAll(\PDO::FETCH_ASSOC);
             }
         } catch (\Throwable $th) {

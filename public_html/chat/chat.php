@@ -1,4 +1,3 @@
-<h1>Chat</h1>
 <?php
 session_start();
 require_once('libs/pdoconnect.php');
@@ -25,7 +24,7 @@ $usuario->es_valido();
             l.push([f, r, e])
           });
           l
-            .push([f])
+          .push([f])
         },
         catch: function() {
           return k && new k()
@@ -35,6 +34,7 @@ $usuario->es_valido();
     };
   })(window, document, []);
 </script>
+<h1 class="title">Chat</h1>
 <h2 class="text-center text-white">Grupos de chats</h2>
 
 <div class="row">

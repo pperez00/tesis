@@ -28,24 +28,24 @@ try {
         $miembro = intval($separar[1]);
         $grupo_array = $grupo->get_grupo(" or id_chat_grupo='" . $id_chat . "' and miembro='" . $miembro . "'");
         if ($grupo_array != null && count($tarea->get_tareas_id_usuario_grupo($miembro, $id_chat)) == 0) {
-           
-            $vacio = empty($grupo->get_usuario_grupo($id_chat, $id,$miembro));
+
+            $vacio = empty($grupo->get_usuario_grupo($id_chat, $id, $miembro));
             if ($vacio == false) {
-            $borrar = $grupo->borrar_miembro($miembro,$id_chat);
-            if ($borrar == true) {
-                $enviar['cantidad'] = count($grupo_array) - 1;
-                $msj = 'Miembro borrado';
+                $borrar = $grupo->borrar_miembro($miembro, $id_chat);
+                if ($borrar == true) {
+                    $enviar['cantidad'] = count($grupo_array) - 1;
+                    $msj = 'Miembro borrado';
+                } else {
+                    $error = true;
+                    $msj = 'Error';
+                }
             } else {
                 $error = true;
                 $msj = 'Error';
             }
         } else {
             $error = true;
-            $msj = 'Error';
-        }
-        } else {
-            $error = true;
-            $msj = 'Error';
+            $msj = 'Tiene tareas pendientes';
         }
     } else {
         $error = true;
