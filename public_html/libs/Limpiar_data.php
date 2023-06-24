@@ -58,9 +58,8 @@ class Limpiar_data
             $mayus = preg_match('@[A-Z]@', $pass);
             $minus = preg_match('@[a-z]@', $pass);
             $numeros    = preg_match('@[0-9]@', $pass);
-            // $especiales = preg_match('@[^\w]@', $pass);
 
-            if (!$mayus || !$minus || !$numeros || strlen($pass) < 8) {
+            if (!$mayus || !$minus || !$numeros || strlen($pass) < 6) {
                 $estado = false;
             }
         } catch (\Throwable $th) {

@@ -74,7 +74,6 @@ class Pdoconnect
         $datos = false;
         try {
             if ($this->contiene_parametros($parametros) == true) {
-             
                 $sql = 'delete from ' . $parametros['tabla'] . ' where ' . $parametros['where'];
                 $datos = $this->conn->prepare($sql)->execute();
             }
@@ -100,9 +99,8 @@ class Pdoconnect
                 $values = $this->cerrar_insertar($values);
                 $sql = "INSERT INTO " . $parametros['tabla'] . ' ' . $campos . ' VALUES ' . $values;
                 $coneccion = $this->conn->prepare($sql);
-                //echo $sql;           
                 $estado = $coneccion->execute();
-            } 
+            }
         } catch (\Throwable $th) {
             die();
         }
@@ -121,7 +119,6 @@ class Pdoconnect
                 $campos = substr($campos, 0, -1);
                 $sql = "UPDATE " . $parametros['tabla'] . " SET " . $campos . " WHERE " . $parametros['where'];
                 $coneccion = $this->conn->prepare($sql);
-               // echo $sql;   
                 $estado = $coneccion->execute();
             }
         } catch (\Throwable $th) {

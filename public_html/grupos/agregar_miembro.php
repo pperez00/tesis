@@ -27,7 +27,10 @@ if (strlen($id_chat_grupo) == 0) {
         <h1 class="title">Agregar miembro</h1>
         <form class="agregar_miembro_form pb-3 gral-form" id="agregar_miembro_form" action="grupos/agregar_miembro_grupo.php">
             <label id="nuevo_grupo" class="text-dark" for="chk" aria-hidden="true">Invitar</label>
-            <?php require_once 'grupos/lista_personas.php'; ?>
+            <div class="input-group mt-2">
+                <span class="input-group-text">Miembro</span>
+                <input type="text" required class="form-control" name="miembro" id="miembro">
+            </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 px-2">
                 <button type="submit" class="btn boton"> <i class="fa-solid fa-paper-plane-top"></i>> Enviar </button>
                 <button type="reset" class="btn boton-borrar"><i class="fa-solid fa-trash"></i> Borrar </button>

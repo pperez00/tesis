@@ -17,7 +17,7 @@ if (intval($id) > 0) :
 ?>
     <div class="input-group mt-2 w-auto">
         <span class="input-group-text">Estado</span>
-        <select required class="form-select pr-5" id="estado" name="estado">
+        <select required class="form-select " id="estado" name="estado">
             <option value="" selected disabled hidden> Elegí uno </option>
             <?php
 

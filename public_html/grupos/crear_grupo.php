@@ -25,20 +25,26 @@ try {
         $parametros['campos'] = 'count(*) as cantidad';
         if ($grupo->get_grupo(" and nombre='" . $datos['nombre'] . "'") == null && intval($pdoconnect->buscar_datos($parametros)[0]['cantidad']) == 0) {
             $datos['usuario'] = $id_usuario;
-
-            if ($usuario->get_premium() == 0 && count($grupo->get_grupos()) >= 3) {
-                $error = true;
-                $msj = 'No se puede crear el grupo, necesitas mas espacio';
-            }
-
-            if ($error == false) {
-                $insertar = $grupo->insertar($datos);
-                if ($insertar == true) {
-                    $msj = 'Se creo el grupo';
-                } else {
+            $id_usuario_fk =  $usuario->get_id_name($datos['miembro']);
+            if (intval($id_usuario_fk) > 0 && $id_usuario != $id_usuario_fk) {
+                $datos['miembro'] = $id_usuario_fk;
+                if ($usuario->get_premium() == 0 && count($grupo->get_grupos()) >= 3) {
                     $error = true;
-                    $msj = 'No se pudo crear el grupo';
+                    $msj = 'No se puede crear el grupo, necesitas mas espacio';
                 }
+
+                if ($error == false) {
+                    $insertar = $grupo->insertar($datos);
+                    if ($insertar == true) {
+                        $msj = 'Se creo el grupo';
+                    } else {
+                        $error = true;
+                        $msj = 'No se pudo crear el grupo';
+                    }
+                }
+            } else {
+                $error = true;
+                $msj = 'No se pudo crear el grupo';
             }
         } else {
             $error = true;

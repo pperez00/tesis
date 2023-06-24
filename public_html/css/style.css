@@ -105,9 +105,9 @@ main {
   text-transform: capitalize;
 }
 
-select {
+/* select {
   margin-right: 1.5rem;
-}
+} */
 
 .phone {
   font-size: 14px;
@@ -680,6 +680,11 @@ select {
 
 .sticky-top{
   z-index: 2;
+}
+
+input[type=file]::file-selector-button {
+  display: none;
+   
 }
 
 

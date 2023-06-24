@@ -79,10 +79,10 @@ class Grupo extends Conector implements get_nombre_interfaz
       return $datos;
    }
 
-   public function borrar_miembro($id_usuario = 0,$id_chat_grupo = '')
+   public function borrar_miembro($id_usuario = 0, $id_chat_grupo = '')
    {
       $borrado = false;
-  
+
       try {
          if (intval($id_usuario) > 0) {
             $parametros['tabla'] = 'grupos';
@@ -116,7 +116,7 @@ class Grupo extends Conector implements get_nombre_interfaz
       return $buscar;
    }
 
-   public function get_usuario_grupo($id_chat_grupo = '', $usuario = 0,$miembro = 0)
+   public function get_usuario_grupo($id_chat_grupo = '', $usuario = 0, $miembro = 0)
    {
       $parametros = $this->get_parametros();
       $parametros['where'] = "id_chat_grupo='" . $id_chat_grupo . "' and usuario='" . $usuario . "' or id_chat_grupo='" . $id_chat_grupo . "' and miembro='" . $miembro . "' limit 1";

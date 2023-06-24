@@ -3,7 +3,7 @@ class Usuario
 {
     private $pdoconnect;
     private $permiso = '';
-    
+
     function __construct(Pdoconnect $pdoconnect)
     {
         $this->pdoconnect =  $pdoconnect;
@@ -21,7 +21,8 @@ class Usuario
         return $id;
     }
 
-    public function get_nombre_usuario(){
+    public function get_nombre_usuario()
+    {
         $nombre = '';
         $campo = 'usuario';
         try {
@@ -96,7 +97,8 @@ class Usuario
         return $email;
     }
 
-    public function get_premium(){
+    public function get_premium()
+    {
         $premium = 0;
         $campo = 'premium';
         try {
@@ -130,6 +132,23 @@ class Usuario
         }
     }
 
+    public function get_id_name($nombre = '')
+    {
+        try {
+            $id = 0;
+            $parametros = array();
+            $parametros['where'] = "usuario='" . $nombre . "'";
+            $parametros['tabla'] = 'usuarios';
+            $parametros['campos'] = 'id';
+            $data = $this->pdoconnect->buscar_datos($parametros);
+            if (count($data) > 0) {
+                $id = $data[0]['id'];
+            }
+        } catch (\Throwable $th) {
+        }
+        return $id;
+    }
+
     public function get_foto($usuario = '')
     {
         $foto = '';
@@ -158,7 +177,8 @@ class Usuario
         return $carpetas;
     }
 
-    public function get_pdoconnect(){
+    public function get_pdoconnect()
+    {
         return $this->pdoconnect;
     }
 }

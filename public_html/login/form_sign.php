@@ -31,7 +31,7 @@ require_once('libs/Limpiar_data.php');
     ?>
         <div class="input-group mt-2 w-auto">
             <span class="input-group-text">Permiso</span>
-            <select required class="form-select pr-5" id="permiso" name="permiso">
+            <select required class="form-select " id="permiso" name="permiso">
                 <option value="" selected disabled hidden> Elegí uno </option>
                 <?php
                 $parametros['where'] = ' 1 ';

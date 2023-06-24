@@ -28,7 +28,7 @@ $grupos = $grupo->get_grupo();
     <div class="container d-flex justify-content-center align-items-center">
         <div class="row tarjeta-grupo">
             <?php foreach ($grupos as $key => $value) { ?>
-                <div class="col tarjeta">
+                <div class="col-auto tarjeta">
                     <div class="card grupos mb-3">
                         <div class="imagen-grupo">
                             <img loading="lazy" src="./img/mat.png" class="card-img-top img-grupo" alt="imagen del grupo">

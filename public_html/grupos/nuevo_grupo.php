@@ -27,7 +27,12 @@ if ($permiso != 1) {
     <span class="input-group-text">Nombre</span>
     <input type="text" required class="form-control" name="nombre" id="nombre">
   </div>
-  <?php require_once 'grupos/lista_personas.php'; ?>
+
+  <div class="input-group mt-2">
+    <span class="input-group-text">Miembro</span>
+    <input type="text" required class="form-control" name="miembro" id="miembro">
+  </div>
+
   <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 px-2">
     <button <?php if ($enviar_form == false) : ?> disabled <?php endif; ?> type="submit" class="btn boton"> <i class="fa-solid fa-paper-plane-top"></i>> Enviar </button>
     <button type="reset" class="btn boton-borrar"><i class="fa-solid fa-trash"></i> Borrar </button>
@@ -53,7 +58,6 @@ if ($permiso != 1) {
       processData: false,
       success: function(data) {
         enviar_toast(data);
-        console.log(data);
         if (data.error == false) {
           setTimeout(() => {
             window.location = 'index.php?seccion=grupos';

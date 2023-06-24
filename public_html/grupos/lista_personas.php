@@ -22,7 +22,7 @@ if(intval($id) > 0):
 ?>
 <div class="input-group mt-2 w-auto">
     <span class="input-group-text">Agregar miembro</span>
-    <select required class="form-select pr-5" id="miembro" name="miembro">
+    <select required class="form-select " id="miembro" name="miembro">
     <option value="" selected disabled hidden> Elegui uno </option>
         <?php
         foreach ($usuarios as $key => $value) {

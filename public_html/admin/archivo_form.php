@@ -20,7 +20,7 @@ if ($permiso == 1 && $estado == true) {
       ?>
       <div class="input-group mt-2 w-auto">
          <span class="input-group-text">Agregar grupo</span>
-         <select required class="form-select pr-5" id="grupo" name="grupo">
+         <select required class="form-select " id="grupo" name="grupo">
             <option value="" selected disabled hidden> Elegí uno </option>
             <?php
             $parametros['tabla'] = 'grupos';

@@ -34,13 +34,24 @@ try {
                 $msj = 'Tenes que ser premium';
             }
             if (count($chat->get_usuario_grupo($id_chat_grupo, $id_usuario)) > 0 && $error == false) {
-                $parametros['miembro'] = $datos['miembro'];
-                $parametros['id_chat_grupo'] = $id_chat_grupo;
-                $nombre_grupo = $chat->get_nombre($id_chat_grupo);
-                $parametros['nombre'] = $nombre_grupo[0]['nombre'];
-                $agregado = $chat->agregar_miembro($parametros);
-                if ($agregado == true) {
-                    $msj = 'Ese usuario fue agregado';
+                $id_usuario_fk =  $usuario->get_id_name($datos['miembro']);
+                $parametros_buscar = array();
+                $parametros_buscar['where'] = "id_chat_grupo='" . $id_chat_grupo . "' and miembro='" . $id_usuario_fk . "'";
+                $parametros_buscar['tabla'] = 'grupos';
+                $parametros_buscar['campos'] = 'count(*) as cantidad';
+                if (intval($id_usuario_fk) > 0 && $id_usuario != $id_usuario_fk && intval($pdoconnect->buscar_datos($parametros_buscar)[0]['cantidad']) == 0) {
+                    $datos['miembro'] = $id_usuario_fk;
+                    $parametros['miembro'] = $datos['miembro'];
+                    $parametros['id_chat_grupo'] = $id_chat_grupo;
+                    $nombre_grupo = $chat->get_nombre($id_chat_grupo);
+                    $parametros['nombre'] = $nombre_grupo[0]['nombre'];
+                    $agregado = $chat->agregar_miembro($parametros);
+                    if ($agregado == true) {
+                        $msj = 'Ese usuario fue agregado';
+                    } else {
+                        $error = true;
+                        $msj = 'Error';
+                    }
                 } else {
                     $error = true;
                     $msj = 'Error';

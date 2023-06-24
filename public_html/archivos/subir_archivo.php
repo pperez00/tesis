@@ -26,7 +26,7 @@ $grupos = $grupo->get_grupo();
         <label id="titulo_formulario" class="text-dark" for="chk" aria-hidden="true">Subir archivo</label>
         <div class="input-group mt-2 w-auto mb-3 ml-5">
             <span class="input-group-text">Grupo</span>
-            <select class="form-select pr-5" id="grupo" name="grupo" required>
+            <select class="form-select " id="grupo" name="grupo" required>
                 <?php
                 foreach ($grupos as $key => $value) {
                 ?>

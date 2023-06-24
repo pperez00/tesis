@@ -59,7 +59,6 @@ require_once('libs/Limpiar_data.php');
                 <label>Password</label>
             </div>
             <div class="input-box">
-                <span class="icon"><i class="fa-solid fa-lock"></i></span>
                 <input accept="image/png, image/gif, image/jpeg" type="file" required class="form-control" name="foto" id="foto">
                 <label>Foto de perfil</label>
             </div>
@@ -76,7 +75,7 @@ require_once('libs/Limpiar_data.php');
             ?>
                 <div class="input-group mt-2 w-auto">
                     <span class="input-group-text">Permiso</span>
-                    <select required class="form-select pr-5" id="permiso" name="permiso">
+                    <select required class="form-select " id="permiso" name="permiso">
                         <option value="" selected disabled hidden> Elegui uno </option>
                         <?php
                         $parametros['where'] = ' 1 ';
