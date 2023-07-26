@@ -131,13 +131,12 @@ class Grupo extends Conector implements get_nombre_interfaz
       $parametros['where'] = "id_chat_grupo='" . $id_chat_grupo . "'";
       $miembros = $this->get_pdoconnect()->buscar_datos($parametros);
       if (count($miembros) > 0) {
-         $usuario = $miembros[0]['usuario'];
-         $usuario_array = $this->get_usuario_grupo($id_chat_grupo, $usuario);
+         $usuario_array = $this->get_usuario_grupo($id_chat_grupo);
          $miembro['nombre'] = $usuario_array[0]['nombre'];
          $miembro['usuario'] = $usuario_array[0]['usuario'];
          $miembro['miembro'] = $usuario_array[0]['usuario'];
          $miembro['id_chat_grupo'] = $usuario_array[0]['id_chat_grupo'];
-         array_push($miembros, $miembro);
+         array_push($miembro);
       }
       return $miembros;
    }

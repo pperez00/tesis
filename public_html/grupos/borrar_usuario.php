@@ -28,7 +28,6 @@ try {
         $miembro = intval($separar[1]);
         $grupo_array = $grupo->get_grupo(" or id_chat_grupo='" . $id_chat . "' and miembro='" . $miembro . "'");
         if ($grupo_array != null && count($tarea->get_tareas_id_usuario_grupo($miembro, $id_chat)) == 0) {
-
             $vacio = empty($grupo->get_usuario_grupo($id_chat, $id, $miembro));
             if ($vacio == false) {
                 $borrar = $grupo->borrar_miembro($miembro, $id_chat);

@@ -95,7 +95,7 @@ $grupos = $grupo->get_grupo();
                         if (response.cantidad <= 0) {
                             window.location = 'index.php?seccion=grupos';
                         }
-                    }, 1800);
+                    }, 800);
                 }
                 enviar_toast(response);
             }
@@ -106,10 +106,9 @@ $grupos = $grupo->get_grupo();
         id_borrar = id;
         setTimeout(() => {
             $('#modal').show();
-        }, 1200);
+        }, 800);
 
     }
-
 
     var myModalEl = document.getElementById('modal')
     myModalEl.addEventListener('click', function(event) {
