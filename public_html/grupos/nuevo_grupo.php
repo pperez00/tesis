@@ -19,24 +19,26 @@ if ($permiso != 1) {
   }
 }
 ?>
-<h1 class="title">Nuevo grupo</h1>
-<form class="nuevo_grupo_form gral-form pb-3" id="nuevo_grupo_form" action="grupos/crear_grupo.php">
-  <label id="nuevo_grupo" class="text-dark" for="chk" aria-hidden="true">Crear grupo</label>
-
-  <div class="input-group mt-2">
-    <span class="input-group-text">Nombre</span>
-    <input type="text" required class="form-control" name="nombre" id="nombre">
+<div class="container d-flex justify-content-center">
+  <div class="col-lg-6 col-md-8 col-sm-12">
+    <form class="gral-form" id="nuevo_grupo_form" action="grupos/crear_grupo.php">
+      <label id="nuevo_grupo" class="text-dark" for="chk" aria-hidden="true">Nuevo grupo</label>
+    
+      <div class="input-group mt-2">
+        <span class="input-group-text">Nombre</span>
+        <input type="text" required class="form-control" name="nombre" id="nombre" placeholder="nombre del grupo">
+      </div>
+    
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+        <button <?php if ($enviar_form == false) : ?> disabled <?php endif; ?> type="submit" class="btn boton"> <i class="fa-solid fa-paper-plane-top"></i>> Enviar </button>
+        <button type="reset" class="btn boton-borrar"><i class="fa-solid fa-trash"></i> Borrar </button>    
+    </form>
   </div>
-
-  <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 px-2">
-    <button <?php if ($enviar_form == false) : ?> disabled <?php endif; ?> type="submit" class="btn boton"> <i class="fa-solid fa-paper-plane-top"></i>> Enviar </button>
-    <button type="reset" class="btn boton-borrar"><i class="fa-solid fa-trash"></i> Borrar </button>
-
-</form>
+</div>
 
 <script>
-  $("#nuevo_grupo_form").submit(function(e) {
 
+  $("#nuevo_grupo_form").submit(function(e) {
     e.preventDefault();
     var form = $(this);
     var form_jq = $('#nuevo_grupo_form');
@@ -58,7 +60,6 @@ if ($permiso != 1) {
             window.location = 'index.php?seccion=grupos';
           }, 1000);
         }
-
       }
     });
   });

@@ -20,9 +20,8 @@ $tarea->set_id_usuario($id_usuario);
 $grupos = $grupo->get_grupo();
 
 ?>
-<h1 class="title">Archivos</h1>
 <?php if (count($grupos) > 0) { ?>
-    <form class="subir gral-form mb-5 pb-1" id="subir">
+    <form class="subir gral-form mb-5 pb-3" id="subir">
         <label id="titulo_formulario" class="text-dark" for="chk" aria-hidden="true">Subir archivo</label>
         <div class="input-group mt-2 w-auto mb-3 ml-5">
             <span class="input-group-text">Grupo</span>
@@ -40,7 +39,7 @@ $grupos = $grupo->get_grupo();
             <span class="input-group-text">Archivo</span>
             <input required accept="application/pdf" type="file" required class="form-control" name="archivo" id="archivo">
         </div>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 px-2">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
             <button type="submit" class="btn boton"> <i class="fa-solid fa-paper-plane-top"></i>> Enviar </button>
             <button type="reset" class="btn boton-borrar"><i class="fa-solid fa-trash"></i> Borrar </button>
         </div>

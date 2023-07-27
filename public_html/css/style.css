@@ -61,12 +61,6 @@ main {
   position: absolute !important;
 }
 
-/* .element {
-  display: inline-block;
-  width: 17.5em;
-  height: 17.5em;
-} */
-
 #cargando {
   width: 30rem;
   height: 30rem;
@@ -80,6 +74,7 @@ main {
 }
 
 .chat_grupo {
+  width: -moz-fit-content;
   width: fit-content;
   height: 4rem !important;
   margin-left: 0.5rem;
@@ -91,10 +86,14 @@ main {
 }
 
 .grupos {
-  width: 25rem;
+  width: 22rem;
   height: 35rem;
   overflow: auto;
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
+}
+
+.tarjeta-grupo{
+  justify-content: center;
 }
 
 .grupos::-webkit-scrollbar {
@@ -104,10 +103,6 @@ main {
 .fancy-grid-header-cell-text {
   text-transform: capitalize;
 }
-
-/* select {
-  margin-right: 1.5rem;
-} */
 
 .phone {
   font-size: 14px;
@@ -177,7 +172,6 @@ main {
   font-size: 18px;
 }
 
-
 @media (min-width: 600px) {
   .tabla {
     margin-right: 1rem;
@@ -188,8 +182,8 @@ main {
   }
 }
 
-
 .texto_inicio {
+  width: -moz-fit-content;
   width: fit-content;
   height: 10rem;
   overflow: auto;
@@ -207,8 +201,6 @@ main {
   color: black;
   font-weight: bold;
 }
-
-
 
 .inicio {
   background: #287bff;
@@ -631,9 +623,9 @@ main {
 
 .boton-flotante{
   position: fixed;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  z-index: 4;  
+  bottom: 2.5rem;
+  right: 1.5rem;
+  z-index: 14;  
 }
 
 .btn-mas a{
@@ -660,9 +652,9 @@ main {
 @media (min-width: 500px) {
   .boton-flotante {
       position: fixed;
-      bottom: 3.5rem;
-      right: 1rem;
-      z-index: 4;  
+      bottom: 4.5rem;
+      right: 2rem;
+      z-index: 14;  
     }
 }
 

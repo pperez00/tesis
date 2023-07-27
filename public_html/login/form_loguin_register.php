@@ -5,8 +5,6 @@ require_once('libs/admin.php');
 require_once('libs/Limpiar_data.php');
 ?>
 
-
-
 <div class="wrapper">
     <!-- formulario de loguin -->
     <div class="form-box login">
@@ -85,7 +83,6 @@ require_once('libs/Limpiar_data.php');
                         ?>
                             <option value="<?php echo $value['id']; ?>"><?php echo ucfirst($value['nombre']); ?></option>
                         <?php
-
                         }
                         ?>
                     </select>

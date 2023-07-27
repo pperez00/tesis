@@ -20,21 +20,19 @@ if ($limpiar_data->validar_data($datos, -1)) {
         if ($dato_validar['estado'] == true) {
             $_SESSION['datos_validar'] = $dato_validar;
 ?>
-
-        <h1 id="nuevo_grupo" class="title" for="chk" aria-hidden="true">Asignar tarea</h1>
             <form class="nueva_tarea_form gral-form pb-3" id="nueva_tarea_form" action="tareas/dar_tarea.php">
-
+                <h2 id="nuevo_grupo" class="text-center mb-3" for="chk" aria-hidden="true">Asignar tarea</h2>
                 <div class="input-group mt-2">
                     <span class="input-group-text">Descripción</span>
                     <textarea required class="form-control" name="nombre" id='nombre' id="" cols="30" rows="10"></textarea>
                 </div>
 
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 px-2">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
                     <button type="submit" class="btn boton"> <i class="fa-solid fa-paper-plane-top"></i>> Enviar </button>
                     <button type="reset" class="btn boton-borrar"><i class="fa-solid fa-trash"></i> Borrar </button>
 
-
             </form>
+
             <script>
                 $("#nueva_tarea_form").submit(function(e) {
                     e.preventDefault();
@@ -54,11 +52,8 @@ if ($limpiar_data->validar_data($datos, -1)) {
                                     window.location = 'index.php?seccion=tareas';
                                 }, 1000);
                             }
-
                         }
                     });
-
-
                 });
             </script>
 <?php

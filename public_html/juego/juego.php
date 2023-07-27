@@ -9,7 +9,4 @@ $usuario = new Usuario($pdoconnect);
 $permiso = $usuario->get_permiso();
 $usuario->es_valido();
 ?>
-<h1 class="title">Juego</h1>
-
-
-<iframe class="w-100 h-75 mb-2 mt-2" src="https://kahoot.it/"></iframe>
+<iframe class="w-100 h-100" src="https://kahoot.it/"></iframe>
