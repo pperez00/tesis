@@ -49,7 +49,7 @@ try {
                         $msj = 'El archivo ya existe';
                     }
 
-                    if ($_FILES["foto"]["size"] > 500000) {
+                    if ($_FILES["foto"]["size"] > 20000000) {
                         $error = true;
                         $msj = 'El archivo es muy grande';
                     }

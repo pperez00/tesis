@@ -1,50 +1,67 @@
-<h1 class="title">Inicio</h1>
-<div class="card-group ml-5 card_perfil">
-
-    <div class="inicio">
-        <div class="card-body">
-
-            <div class="icon">
-                <ion-icon name="globe-outline"></ion-icon>
+<section class="container home">
+    <article class="">
+        <div class="row info">
+            <div class="col-8 p-5">
+                <h1>La manera más fácil de estudiar</h1>
+                <h3>Crea grupos con tus compañeros</h3>
             </div>
-            <h2 class="card-title text-center">Objetivo</h2>
-            <div class="texto_inicio grupos">
-                <p class="card-text text-center">
-                    Nuestro objetivo es brindar una plataforma para facilitar el estudio y organización de trabajos grupales entre un grupo de compañeros. Poder mantener conversaciones con los miembros del equipo y añadir distintos archivos desde otras plataformas, además los integrantes podrán desafiarse mediante un juego de preguntas y respuestas para hacerse una autoevaluación de lo estudiado.
-                </p>
+            <div class="col-4 back-r">
+                <img loading="lazy" class="info_img" src="img/cap/grupos.png" alt="creación de grupos">
             </div>
+        </div>
 
+    </article>
+    <article class="archivos_info">
+        <div class="row info">
+            <div class="col-4 back-l">
+                <img loading="lazy" class="info_img" src="img/cap/archivos.png" alt="comparte archivos">
+            </div>
+            <div class="col-8 p-5">
+                <h1>Comparte archivos</h1>
+                <h3>Sube tus archivos para que todo tu grupo los vea y descargue</h3>
+            </div>
+        </div>
+    </article>
+    <article class="tareas_info">
+        <div class="row info">
+            <div class="col-8 p-5">
+                <h1>Asigna tareas</h1>
+                <h3>Puedes asignar tareas a tus compañeros y ver o cambiar el estado</h3>
+            </div>
+            <div class="col-4 back-r">
+                <img loading="lazy" class="info_img" src="img/cap/tareas.png" alt="asigna tareas">
+            </div>
+        </div>
+    </article>
+    <article class="chat_info">
+        <div class="row info">
+            <div class="col-4 back-l">
+                <img loading="lazy" class="info_img" src="img/cap/chat.png" alt="comparte archivos">
+            </div>
+            <div class="col-8 p-5">
+                <h1>Chatea</h1>
+                <h3>Mantenete comunicado con tus compañeros</h3>
+            </div>
+        </div>
+    </article>
+    <article class="juego_info">
+        <div class="row info">
+            <div class="col-8 p-5">
+                <h1>Juega</h1>
+                <h3>Crea preguntas y desafía a tus compañeros para evaluar lo estudiado</h3>
+            </div>
+            <div class="col-4 back-r">
+                <img loading="lazy" class="info_img" src="img/cap/juego.png" alt="asigna tareas">
+            </div>
+        </div>
+    </article>
+
+    <div class="descarga">
+        <div class="row">
+            <h1 class="m-3">Descarga ya nuestra app</h1>
+            <div class="">
+                <a href="img/logo-no-background.svg" download="logo-no-background.svg" class=" btn btn-descargar m-5"> <img loading="lazy" class="img-fluid logo mr-2" src="img/logo-no-background.svg" alt="Logo"> Descargar</a>
+            </div>
         </div>
     </div>
-
-    <div class="inicio">
-
-        <div class="card-body">
-            <div class="icon">
-                <ion-icon name="diamond-outline"></ion-icon>
-            </div>
-            <h2 class="card-title text-center">Visión</h2>
-            <p class="card-text text-center ">
-                Nuestra vision es estar al dia con las nuevas tecnologias que van necesitando los grupos para poder faciltiar el estudio a los mismos
-            </p>
-        </div>
-    </div>
-
-
-    <div class="inicio">
-        <div class="card-body">
-            <div class="icon">
-                <ion-icon name="globe-outline"></ion-icon>
-            </div>
-            <h2 class="card-title text-center">Misión</h2>
-            <p class="card-text text-center">
-                Nuestra mision es facilitar el estudio y la organizaicon de grupos para los alumnos con las herramientas del sistema
-            </p>
-        </div>
-    </div>
-</div>
-
-
-
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</section>

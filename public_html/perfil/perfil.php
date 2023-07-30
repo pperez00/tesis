@@ -47,7 +47,8 @@ $foto = $usuario->get_foto($nombre_usuario);
 <script>
     $(document).ready(function() {
         $('#titulo_formulario').html('Cambiar');
-        $('#usuario').parent().remove();
+        // $('#usuario').parent().remove();
+        $('#usuario').val('<?php echo $usuario->get_nombre_usuario(); ?>');
         $('#email').val('<?php echo $usuario->get_email(); ?>');
         $('#nombre').val('<?php echo $usuario->get_nombre(); ?>');
     });
