@@ -60,7 +60,7 @@
         <div class="row">
             <h1 class="m-3">Descarga ya nuestra app</h1>
             <div class="">
-                <a href="img/logo-no-background.svg" download="logo-no-background.svg" class=" btn btn-descargar m-5"> <img loading="lazy" class="img-fluid logo mr-2" src="img/logo-no-background.svg" alt="Logo"> Descargar</a>
+                <a href="apk\grupy.apk" download="grupy.apk" class=" btn btn-descargar m-5"> <img loading="lazy" class="img-fluid logo mr-2" src="img/logo-no-background.svg" alt="Logo"> Descargar</a>
             </div>
         </div>
     </div>
