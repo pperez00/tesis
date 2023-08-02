@@ -77,7 +77,7 @@ try {
                         }
                         if (move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file)) {
                             $datos['foto'] = $nombre;
-                            $datos['premium'] = 0;
+                            //$datos['premium'] = 0;
                             if(isset($datos['id']) == false){
                                 $parametros['values'] = $datos;
                                 $resultado = $pdoconnect->insertar($parametros);
@@ -115,7 +115,7 @@ try {
         }
     } else {
         $error = true;
-        $msj = 'Los daatos estan vacios';
+        $msj = 'Los datos estan vacios';
     }
 } catch (\Throwable $th) {
     $error = true;

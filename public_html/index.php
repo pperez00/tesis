@@ -21,7 +21,7 @@
 
 <body>
    <?php
-   $seccion = isset($_GET["seccion"]) ? $_GET["seccion"] : 'login';
+   $seccion = isset($_GET["seccion"]) ? $_GET["seccion"] : 'inicio';
 
    ob_start();
    error_reporting(0);
