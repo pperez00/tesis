@@ -47,8 +47,9 @@ $foto = $usuario->get_foto($nombre_usuario);
 <script>
     $(document).ready(function() {
         $('#titulo_formulario').html('Cambiar');
-        // $('#usuario').parent().remove();
-        $('#usuario').val('<?php echo $usuario->get_nombre_usuario(); ?>');
+        var usuario = $('#usuario');
+        usuario.val('<?php echo $usuario->get_nombre_usuario(); ?>');
+        usuario.addClass('disabled');  
         $('#email').val('<?php echo $usuario->get_email(); ?>');
         $('#nombre').val('<?php echo $usuario->get_nombre(); ?>');
     });
@@ -68,6 +69,9 @@ $foto = $usuario->get_foto($nombre_usuario);
                 processData: false,
                 success: function(data) {
                     enviar_toast(data);
+                    setTimeout(() => {
+                        window.location = 'index.php?seccion=perfil';
+                    }, 1000);
                 }
             });
         }

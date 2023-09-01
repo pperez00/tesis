@@ -102,7 +102,7 @@
             </div>
             <div class="modal-footer btn-group">
                <button id="cerrar" type="button" onclick="cerrar_modal()" class="btn btn-primary" data-bs-dismiss="modal"> <i class="fa-solid fa-xmark"></i> No</button>
-               <button id="confirmar" type="button" class="btn boton-borrar borrar_alert">Si</button>
+               <button id="confirmar" type="button" class="btn boton-borrar borrar_alert"> Si</button>
             </div>
          </div>
       </div>

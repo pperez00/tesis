@@ -15,8 +15,7 @@ if ($permiso == 1 && $estado == true) {
    <form class="subir mb-5 pb-1" id="subir">
       <label id="titulo_formulario" class="text-dark" for="chk" aria-hidden="true">Subir archivo</label>
       <?php
-      include_once('grupos/lista_personas.php');
-      require_once('tareas/lista_estados.php');
+      require_once('grupos/lista_personas.php');
       ?>
       <div class="input-group mt-2 w-auto">
          <span class="input-group-text">Agregar grupo</span>
@@ -45,12 +44,9 @@ if ($permiso == 1 && $estado == true) {
    </form>
    <script>
       $(document).ready(function () {
-
          var meimbro = $('#miembro');
          meimbro.attr("name", "usuario");
          meimbro.attr("id", "usuario");
-
-
       });
       $("#subir").submit(function(e) {
          e.preventDefault();
@@ -71,7 +67,7 @@ if ($permiso == 1 && $estado == true) {
                   if (data.error == false) {
                      form_jq.trigger('reset');
                      setTimeout(() => {
-                        window.location = 'index.php?seccion=admin&id=6';
+                        window.location = 'index.php?seccion=admin&id=5';
                      }, 1000);
                   }
                }

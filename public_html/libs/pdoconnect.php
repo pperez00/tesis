@@ -6,6 +6,13 @@ class Pdoconnect
     private $limpiar_data;
     private $ruta_servidor = 'http://localhost/tesis/public_html/';
 
+
+    public static function debug($array){
+        echo '<hr>';
+        var_dump($array);
+        echo '<hr>';
+    }
+
     function __construct(Limpiar_data $limpiar_data)
     {
         $servername = "localhost";
@@ -55,6 +62,7 @@ class Pdoconnect
     public function buscar_datos($parametros = array())
     {
         $datos = array();
+        $sql = '';
         try {
             if (isset($parametros['campos']) == true && $this->contiene_parametros($parametros) == true) {
                 $sql = "select " . $parametros['campos'] . " from " . $parametros['tabla'] . " where " . $parametros['where'];
@@ -63,7 +71,6 @@ class Pdoconnect
                 $datos = $coneccion->fetchAll(\PDO::FETCH_ASSOC);
             }
         } catch (\Throwable $th) {
-            echo $th;
             die();
         }
         return $datos;
@@ -119,10 +126,12 @@ class Pdoconnect
                 $campos = substr($campos, 0, -1);
                 $sql = "UPDATE " . $parametros['tabla'] . " SET " . $campos . " WHERE " . $parametros['where'];
                 $coneccion = $this->conn->prepare($sql);
+          
                 $estado = $coneccion->execute();
             }
         } catch (\Throwable $th) {
-            die();
+  
+            //die();
         }
         return $estado;
     }

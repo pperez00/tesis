@@ -18,8 +18,6 @@ try {
   if ($permiso == 1 && $estado == true && $limpiar_data->validar_data($datos, -1) == true) {
     $tarea = new Tarea($pdoconnect);
     $tarea->set_permiso($permiso);
-    
-    
       $parametros['tabla'] = 'estado_tareas';
       $parametros['where'] = "id='" . $datos['Estado'] . "'";
       $parametros['campos'] = 'count(*) as cantidad';

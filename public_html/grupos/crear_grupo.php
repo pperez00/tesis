@@ -26,6 +26,7 @@ try {
             $datos['usuario'] = $id_usuario;
             $id_usuario_fk =  $usuario->get_id_name($datos['miembro']);
             $datos['miembro'] = $id_usuario;
+            $grupo->set_group_by('GROUP by nombre');
             if ($usuario->get_premium() == 0 && count($grupo->get_grupos()) >= 3) {
                 $error = true;
                 $msj = 'No se puede crear el grupo, necesitas mas espacio';

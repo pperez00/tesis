@@ -60,6 +60,7 @@ $grupos = $grupo->get_grupo();
                                 }
                                 ?>
                             </ul>
+                    
                         </div>
 
                         <?php if (count($grupo->get_usuario_grupo($value['id_chat_grupo'], $id_usuario)) > 0 or $permiso == 1) { ?>
@@ -78,7 +79,8 @@ $grupos = $grupo->get_grupo();
         <p class="text-center">No tenes ningun grupo</p>
     </div>
 <?php
-} ?>
+} 
+?>
 
 <script>
     var id_borrar = '';
@@ -92,7 +94,8 @@ $grupos = $grupo->get_grupo();
                 if (response.error == false) {
                     $('#' + id_borrar).remove();
                     setTimeout(() => {
-                        if (response.cantidad <= 0) {
+                    
+                        if (response.cantidad <= 0 || response.borrado == true) {
                             window.location = 'index.php?seccion=grupos';
                         }
                     }, 800);

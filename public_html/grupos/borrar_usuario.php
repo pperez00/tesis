@@ -31,12 +31,18 @@ try {
             $vacio = empty($grupo->get_usuario_grupo($id_chat, $id, $miembro));
             if ($vacio == false) {
                 $borrar = $grupo->borrar_miembro($miembro, $id_chat);
-                if ($borrar == true) {
+                if ($borrar['borrado'] == true) {
                     $enviar['cantidad'] = count($grupo_array) - 1;
+                    $enviar['borrado'] = $borrar['borrado'];
                     $msj = 'Miembro borrado';
                 } else {
                     $error = true;
                     $msj = 'Error';
+                    if(isset($borrar['msj'])){
+                        $msj = $borrar['msj'];
+                    }
+                    $enviar = $borrar;
+                    
                 }
             } else {
                 $error = true;

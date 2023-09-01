@@ -39,7 +39,7 @@ if ($permiso == 1 && $estado == true) {
                     enviar_toast(data);
                     if (data.error == false) {
                         setTimeout(() => {
-                            window.location = 'index.php?seccion=admin&id=3';
+                            window.location = 'index.php?seccion=admin&id=2';
                         }, 1000);
                     }
 

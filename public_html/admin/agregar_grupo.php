@@ -21,9 +21,9 @@ try {
         $parametros['campos'] = 'count(*) as cantidad';
         $parametros['tabla'] = 'usuarios';
         $parametros['where'] = "id='" . $datos['usuario'] . "'";
-        if (count($pdoconnect->buscar_datos($parametros)[0]['cantidad']) > 0) {
+        if (intval($pdoconnect->buscar_datos($parametros)[0]['cantidad']) > 0) {
             $parametros['where'] = "id='" . $datos['miembro'] . "'";
-            if (count($pdoconnect->buscar_datos($parametros)[0]['cantidad']) > 0) {
+            if (intval($pdoconnect->buscar_datos($parametros)[0]['cantidad']) > 0) {
                 if (isset($datos['id']) == false) {
                     $grupo_creado = $grupo->insertar($datos);
                     $msj = 'Se creo el grupo';
@@ -54,7 +54,7 @@ try {
     }
 } catch (\Throwable $th) {
     $error = true;
-    $msj = 'Error';
+    $msj = 'Error 2';
 }
 
 $enviar['msj'] = $msj;

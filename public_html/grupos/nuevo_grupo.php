@@ -14,7 +14,8 @@ error_reporting(0);
 $enviar_form = true;
 $grupo = new Grupo($id_usuario, $pdoconnect);
 if ($permiso != 1) {
-  if ($usuario->get_premium() == 0 && count($grupo->get_grupos()) >= 3) {
+  $grupo->set_group_by('GROUP by nombre');
+  if ($usuario->get_premium() == 0 && count($grupo->get_grupo()) >= 3) {
     $enviar_form = false;
   }
 }

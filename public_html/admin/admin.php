@@ -35,7 +35,7 @@ if ($permiso == 1 && $estado == true) {
             <div class="col-md-3">
                 <div class="card-counter primary">
                     <span class="count-numbers text-center"> <?php echo $pdoconnect->buscar_datos($parametros_tareas)[0]['cantidad']; ?> </span>
-                    <span class="count-name text-center">Tareas en proceso</span>
+                    <span class="count-name text-center">Tareas</span>
                 </div>
             </div>
 

@@ -42,7 +42,7 @@ abstract class Conector
 
     public abstract function get_parametros();
 
-    public abstract function cambiar($datos,$id);
-    
+    public abstract function cambiar($datos, $id);
+
     public abstract function insertar($datos = array());
 }

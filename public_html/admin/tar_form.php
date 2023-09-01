@@ -40,6 +40,7 @@ if ($permiso == 1 && $estado == true) {
          var meimbro = $('#miembro');
          meimbro.attr("name", "usuario");
          meimbro.attr("id", "usuario");
+         meimbro.parent().find('span').html('Usuario');
          var estado = $('#estado');
          estado.attr("name", "Estado");
          estado.attr("id", "Estado");
