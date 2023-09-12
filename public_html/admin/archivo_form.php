@@ -12,8 +12,8 @@ $id_tabla = $usuario->get_tabla_session_id();
 $estado = $usuario->get_tabla($id_tabla);
 if ($permiso == 1 && $estado == true) {
 ?>
-   <form class="subir mb-5 pb-1" id="subir">
-      <label id="titulo_formulario" class="text-dark" for="chk" aria-hidden="true">Subir archivo</label>
+   <form class="subir m-2 p-2 gral-form" id="subir">
+      <label id="titulo_formulario" class="" for="chk" aria-hidden="true">Subir archivo</label>
       <?php
       require_once('grupos/lista_personas.php');
       ?>
@@ -38,12 +38,12 @@ if ($permiso == 1 && $estado == true) {
          <input required accept="application/pdf" type="file" required class="form-control" name="archivo" id="archivo">
       </div>
       <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 px-2">
-        <button type="submit" class="btn boton"> <i class="fa-solid fa-paper-plane-top"></i>> Enviar </button>
-        <button type="reset" class="btn boton-borrar"><i class="fa-solid fa-trash"></i> Borrar </button>
-    </div>
+         <button type="submit" class="btn boton"> <i class="fa-solid fa-paper-plane-top"></i>> Enviar </button>
+         <button type="reset" class="btn boton-borrar"><i class="fa-solid fa-trash"></i> Borrar </button>
+      </div>
    </form>
    <script>
-      $(document).ready(function () {
+      $(document).ready(function() {
          var meimbro = $('#miembro');
          meimbro.attr("name", "usuario");
          meimbro.attr("id", "usuario");

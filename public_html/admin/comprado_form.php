@@ -12,8 +12,8 @@ $id_tabla = $usuario->get_tabla_session_id();
 $estado = $usuario->get_tabla($id_tabla);
 if ($permiso == 1 && $estado == true) {
 ?>
-    <form method="post" action="admin/cargar_itempago.php" class="comprado_form pb-5" id="comprado_form">
-        <label id="titulo_formulario" class="text-dark" for="chk" aria-hidden="true">Añadir</label>
+    <form method="post" action="admin/cargar_itempago.php" class="comprado_form gral-form m-2 p-2" id="comprado_form">
+        <label id="titulo_formulario" class="" for="chk" aria-hidden="true">Añadir</label>
         <?php
         include('grupos/lista_personas.php');
         ?>

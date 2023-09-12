@@ -13,17 +13,17 @@ $estado = $usuario->get_tabla($id_tabla);
 if ($permiso == 1 && $estado == true) {
 
 ?>
-    <form method="post" action="admin/cargar_nombre.php" class="estado_form pb-5" id="estado_form">
-        <label id="titulo_formulario" class="text-dark" for="chk" aria-hidden="true">Añadir</label>
+    <form method="post" action="admin/cargar_nombre.php" class="estado_form gral-form m-2 p-2" id="estado_form">
+        <label id="titulo_formulario" class="" for="chk" aria-hidden="true">Añadir</label>
         <div class="input-group mt-2">
             <span class="input-group-text">Nombre</span>
             <input type="text" required class="form-control" name="nombre" id="nombre">
         </div>
-    
+
         <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 px-2">
-        <button type="submit" class="btn boton"> <i class="fa-solid fa-paper-plane-top"></i>> Enviar </button>
-        <button type="reset" class="btn boton-borrar"><i class="fa-solid fa-trash"></i> Borrar </button>
-    </div>
+            <button type="submit" class="btn boton"> <i class="fa-solid fa-paper-plane-top"></i>> Enviar </button>
+            <button type="reset" class="btn boton-borrar"><i class="fa-solid fa-trash"></i> Borrar </button>
+        </div>
     </form>
     <script>
         $("#estado_form").submit(function(e) {

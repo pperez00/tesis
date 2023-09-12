@@ -5,7 +5,7 @@ require_once('libs/admin.php');
 require_once('libs/Limpiar_data.php');
 ?>
 <form class="signup p-3" id="signup">
-    <label id="titulo_formulario" class="text-dark" for="chk" aria-hidden="true">Registrarse</label>
+    <label id="titulo_formulario" class="text-white" for="chk" aria-hidden="true">Registrarse</label>
     <div class="input-group mt-2">
         <span class="input-group-text">Usuario</span>
         <input type="text" required class="form-control" name="usuario" id="usuario">

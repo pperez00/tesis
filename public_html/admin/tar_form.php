@@ -13,8 +13,8 @@ $estado = $usuario->get_tabla($id_tabla);
 if ($permiso == 1 && $estado == true) {
 
 ?>
-   <form method="POST" action="admin/agregar_tarea.php" class="tarea pb-5" id="tarea">
-      <label id="titulo_formulario" class="text-dark" for="chk" aria-hidden="true">Añadir</label>
+   <form method="POST" action="admin/agregar_tarea.php" class="tarea gral-form m-2 p-2" id="tarea">
+      <label id="titulo_formulario" class="" for="chk" aria-hidden="true">Añadir</label>
       <?php
       include_once('grupos/lista_personas.php');
       ?>

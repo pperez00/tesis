@@ -16,14 +16,14 @@ require_once('libs/Limpiar_data.php');
                 <label>Usuario</label>
             </div>
             <div class="input-box">
-                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                <span class="icon"><i class="fa-solid fa-lock ver"></i></span>
                 <input type="password" required name="pass" id="pass">
                 <label>Password</label>
             </div>
-            <div class=" recordar-olvidar">
-                <label><input type="checkbox">Recuérdame</label>
+            <!-- <div class=" recordar-olvidar">
+                <label><input type="checkbox" name="remember_me">Recuérdame</label>
                 <a href="#">¿Olvidaste la contraseña?</a>
-            </div>
+            </div> -->
             <button type="submit" class="btn btn-loguin">Ingresar</button>
             <div class="login-register">
                 <p>¿No tienes una cuenta?
@@ -52,7 +52,7 @@ require_once('libs/Limpiar_data.php');
                 <label>Email</label>
             </div>
             <div class="input-box">
-                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                <span class="icon"><i class="fa-solid fa-lock ver"></i></span>
                 <input type="password" required name="pass" id="pass">
                 <label>Password</label>
             </div>
@@ -60,9 +60,9 @@ require_once('libs/Limpiar_data.php');
                 <input accept="image/png, image/gif, image/jpeg" type="file" required class="form-control" name="foto" id="foto">
                 <label>Foto de perfil</label>
             </div>
-            <div class=" recordar-olvidar">
+            <!-- <div class=" recordar-olvidar">
                 <label><input type="checkbox">Acepto los términos y condiciones</label>
-            </div>
+            </div> -->
 
             <?php
             $limpiar_data = new Limpiar_data;

@@ -22,7 +22,7 @@ $grupos = $grupo->get_grupo();
 ?>
 <?php if (count($grupos) > 0) { ?>
     <form class="subir gral-form mb-5 pb-3" id="subir">
-        <label id="titulo_formulario" class="text-dark" for="chk" aria-hidden="true">Subir archivo</label>
+        <label id="titulo_formulario" class="" for="chk" aria-hidden="true">Subir archivo</label>
         <div class="input-group mt-2 w-auto mb-3 ml-5">
             <span class="input-group-text">Grupo</span>
             <select class="form-select " id="grupo" name="grupo" required>

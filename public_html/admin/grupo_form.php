@@ -13,8 +13,8 @@ $estado = $usuario->get_tabla($id_tabla);
 if ($permiso == 1 && $estado == true) {
 
 ?>
-   <form method="POST" action="admin/agregar_grupo.php" class="tarea pb-5" id="tarea">
-      <label id="titulo_formulario" class="text-dark" for="chk" aria-hidden="true">Añadir</label>
+   <form method="POST" action="admin/agregar_grupo.php" class="tarea gral-form m-2 p-2" id="tarea">
+      <label id="titulo_formulario" class="" for="chk" aria-hidden="true">Añadir</label>
       <?php
       include('grupos/lista_personas.php');
       include('grupos/lista_personas.php');
@@ -28,9 +28,9 @@ if ($permiso == 1 && $estado == true) {
          <input type="text" required class="form-control" name="nombre" id="nombre">
       </div>
       <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 px-2">
-        <button type="submit" class="btn boton"> <i class="fa-solid fa-paper-plane-top"></i>> Enviar </button>
-        <button type="reset" class="btn boton-borrar"><i class="fa-solid fa-trash"></i> Borrar </button>
-    </div>
+         <button type="submit" class="btn boton"> <i class="fa-solid fa-paper-plane-top"></i>> Enviar </button>
+         <button type="reset" class="btn boton-borrar"><i class="fa-solid fa-trash"></i> Borrar </button>
+      </div>
    </form>
    <script>
       $(document).ready(function() {
@@ -40,27 +40,27 @@ if ($permiso == 1 && $estado == true) {
 
       });
       $("#tarea").submit(function(e) {
-            e.preventDefault();
-            var form = $(this);
-            var form_jq = $('#tarea');
-            $.ajax({
-                type: "POST",
-                url: form.attr('action'),
-                data: new FormData(form_jq[0]),
-                contentType: false,
-                cache: false,
-                processData: false,
-                success: function(data) {
-                    enviar_toast(data);
-                    if (data.error == false) {
-                        setTimeout(() => {
-                            window.location = 'index.php?seccion=admin&id=3';
-                        }, 1000);
-                    }
+         e.preventDefault();
+         var form = $(this);
+         var form_jq = $('#tarea');
+         $.ajax({
+            type: "POST",
+            url: form.attr('action'),
+            data: new FormData(form_jq[0]),
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function(data) {
+               enviar_toast(data);
+               if (data.error == false) {
+                  setTimeout(() => {
+                     window.location = 'index.php?seccion=admin&id=3';
+                  }, 1000);
+               }
 
-                }
-            });
-        });
+            }
+         });
+      });
    </script>
 <?php
 } else {

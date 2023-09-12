@@ -28,7 +28,7 @@ if ($permiso == 1 && $estado == true) {
     $parametros_tareas['where'] = 'estado!=3';
     $parametros_tareas['campos'] = 'count(*) as cantidad';
 ?>
-    <h1>Panel de administración</h1>
+    <h1 class="title">Panel de administración</h1>
 
     <div class="container mb-5">
         <div class="row">
