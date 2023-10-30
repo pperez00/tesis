@@ -207,7 +207,7 @@
    <footer class="text-center bg-light d-inline p-2">
       <div class="d-inline">
          <p class="sin_salto">&copy; 2022 - Grupy </p>
-         <a href="mailto:grupy@gmail.com">grupy@gmail.com</a>
+         <a href="mailto:grupy.contacto@gmail.com">grupy.contacto@gmail.com</a>
       </div>
 
    </footer>
